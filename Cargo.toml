@@ -1,0 +1,25 @@
+[package]
+name = "solana-program-starter"
+version = "0.1.0"
+edition = "2021"
+description = "Starter Solana on-chain program written in Rust"
+authors = ["Roseanne Park"]
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "solana_program_starter"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+solana-program = "1.18"
+borsh = "0.10"
+borsh-derive = "0.10"
+thiserror = "1.0"
+
+[dev-dependencies]
+solana-program-test = "1.18"
+solana-sdk = "1.18"
+tokio = { version = "1", features = ["full"] }
